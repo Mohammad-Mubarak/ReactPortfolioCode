@@ -1,0 +1,58 @@
+.img-container {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    width: 100vw;
+    perspective: 1000px;
+  
+  }
+
+  .img-container:hover .img-card {
+    transform: rotateY(20deg) rotateX(-20deg);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    transition: all 0.5s ease-in-out;
+  }
+
+  .img-card {
+    width: 60%;
+    position: absolute;
+  right: 5rem;
+    max-width: 100%;
+    transform-style: preserve-3d;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .img-face {
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .img-front {
+    transform: rotateY(0deg) rotateX(0deg);
+  }
+
+  .img-back {
+    transform: rotateY(180deg) rotateX(0deg);
+  }
+
+
+
+  
+@media screen and (max-width: 768px) {
+    .img-container{
+      width: 95%;
+     
+      
+      /* overflow-x: hidden; */
+    }
+    
+    .img-card {
+      width: 90%;
+      right: 1.5rem;
+    }
+  
+  }
